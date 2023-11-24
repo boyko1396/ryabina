@@ -1,0 +1,24 @@
+.info-appeal {
+  &__container {
+  }
+  &__inner {
+    padding: 10rem $gapBox;
+    border: $borderSize solid transparent;
+    @media (max-width: $lg) {
+      background: $mediumGrayColor;
+      margin: 0 var(--gap-);
+      padding: 20rem $gapBoxMb;
+      border: none;
+    }
+  }
+  &__title {
+    margin: 0;
+    font-weight: normal;
+    line-height: 1.15;
+  }
+  &__title + &__title {
+    @media (max-width: $md) {
+      margin-top: 4rem;
+    }
+  }
+}

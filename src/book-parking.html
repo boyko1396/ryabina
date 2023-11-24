@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('html/head.html', {
+    'title': 'Рябина - Комплекс апартаментов и торговые помещения'
+  })
+  <body>
+
+    <div id="root" class="site">
+      <div class="site__inner">
+        <main role="main" class="site__main page-layout">
+          <!-- header BEGIN -->
+          @@include('html/components/header.html', {
+            'el': 'd-lg-block'
+          })
+          @@include('html/components/header-book-parking.html', {
+            'el': 'page-layout__header'
+          })
+          <!-- header END -->
+          <div class="page-layout__main">
+            <!-- info-section BEGIN -->
+            <section class="info-section">
+              <div class="container info-section__container">
+                <div class="info-section__inner">
+                  <div class="row info-section__row">
+                    <div class="row__col info-section__col info-section__col--media">
+                      <picture class="info-section__picture">
+                        <img src="images/model-img-7.png" alt="Парковочное место №21">
+                      </picture>
+                    </div>
+                    <div class="row__col info-section__col info-section__col--content">
+                      <div class="info-section__content">
+                        <div class="info-section__content-info">
+                          <h2 class="title-size-8 info-section__content-area">Общая площадь 18м²</h2>
+                          <h2 class="title-size-8 info-section__content-suptitle">Цена по запросу</h2>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- info-section END -->
+            <!-- info-appeal BEGIN -->
+            <section class="info-appeal">
+              <div class="container info-appeal">
+                <div class="info-appeal__inner">
+                  <h2 class="title-size-8 color-orange info-appeal__title">Забронируйте объект.</h2>
+                  <h2 class="title-size-8 color-accent info-appeal__title"><span class="d-md-none">Оставьте заявку и мы с вами свяжемся</span><span class="d-md-block">Оставьте заявку</span></h2>
+                </div>
+              </div>
+            </section>
+            <!-- info-appeal END -->
+            <!-- cta-section BEGIN -->
+            <section class="cta-section">
+              <div class="container cta-section__container">
+                <h2 class="visually-hidden">Заказать звонок</h2>
+                <form action="#" class="cta-section__form">
+                  <div class="row cta-section__form-row">
+                    <div class="row__col cta-section__form-col cta-section__form-col--area">
+                      <input type="text" name="surname" class="u-input cta-section__form-input" placeholder="Фамилия">
+                      <input type="text" name="name" class="u-input cta-section__form-input" required placeholder="Имя*">
+                      <input type="tel" name="phone" class="u-input cta-section__form-input" required placeholder="Телефон*">
+                      <input type="email" name="email" class="u-input cta-section__form-input" placeholder="E-mail">
+                    </div>
+                    <div class="row__col cta-section__form-col cta-section__form-col--btn">
+                      <div class="cta-section__form-btn-wrapper">
+                        <button type="submit" class="btn btn--theme-orange-outline btn--size-md cta-section__form-btn">
+                          <span class="btn__inner">
+                            <span class="btn__title">Отправить<br>заявку</span>
+                          </span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+                <footer class="d-lg-none cta-section__footer">
+                  <a href="catalog.html" class="link-router cta-section__footer-link-router">
+                    <svg class="u-icon link-router__icon">
+                      <use xlink:href="images/icons/icons.svg#arrow-type-1"></use>
+                    </svg>
+                    <span class="link-router__title">Назад</span>
+                  </a>
+                </footer>
+              </div>
+            </section>
+            <!-- cta-section END -->
+          </div>
+        </main>
+      </div>
+    </div>
+
+    @@include('html/script.html')
+  </body>
+</html>

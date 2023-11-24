@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('html/head.html', {
+    'title': 'Рябина - Комплекс апартаментов и торговые помещения'
+  })
+  <body>
+
+    <div id="root" class="site">
+      <div class="site__inner">
+        <main role="main" class="site__main main-layout">
+          <!-- main-layout__hero BEGIN -->
+          <section class="main-layout__hero">
+            <div class="container main-layout__hero-container">
+              <h1 class="main-layout__hero-title"><strong>Комплекс апартаментов</strong> и&nbsp;торговые помещения</h1>
+              <div class="main-layout__hero-bg-wrapper">
+                <picture class="main-layout__hero-bg">
+                  <img src="images/main-hero-day.png" alt="Комплекс апартаментов и торговые помещения">
+                </picture>
+                <picture class="main-layout__hero-bg">
+                  <img src="images/main-hero-night.png" alt="Комплекс апартаментов и торговые помещения">
+                </picture>
+                <picture class="main-layout__hero-tree main-layout__hero-tree--1">
+                  <img src="images/tree-1.png">
+                </picture>
+                <picture class="main-layout__hero-tree main-layout__hero-tree--2">
+                  <img src="images/tree-2.png">
+                </picture>
+                <picture class="main-layout__hero-tree main-layout__hero-tree--3">
+                  <img src="images/tree-3.png">
+                </picture>
+              </div>
+            </div>
+          </section>
+          <!-- main-layout__hero END -->
+          <!-- header BEGIN -->
+          @@include('html/components/header.html', {
+            'el': 'main-layout__header'
+          })
+          <!-- header END -->
+          <!-- main-layout__welcome BEGIN -->
+          <section class="main-layout__welcome">
+            <div class="container main-layout__welcome-container">
+              <div class="main-layout__welcome-content">
+                <h2 class="main-layout__welcome-title">Живите рядом!</h2>
+                <div class="content main-layout__welcome-text">
+                  <p>Строящийся объект расположен на улице Линейной, на&nbsp;границе Заельцовского и Центрального районов.</p>
+                  <p>До ближайшей станции метро «Гагаринская» и главной магистрали города — Красного проспекта, время в пути составляет 4 минуты на автомобиле и 15 минут пешком.</p>
+                </div>
+                <div class="content main-layout__welcome-text">
+                  <p>Улица Линейная в локальной точке расположения здания является прямым выходом на одну из главных скоростных транспортных магистралей города — улицу Ипподромскую, обеспечивающую транспортное сообщение с деловым центром, районами левого и&nbsp;правого берега города Новосибирска.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- main-layout__welcome END -->
+        </main>
+      </div>
+    </div>
+
+    @@include('html/script.html')
+  </body>
+</html>

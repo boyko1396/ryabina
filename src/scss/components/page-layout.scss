@@ -1,0 +1,39 @@
+.page-layout {
+  &__header {
+    background-image: -webkit-linear-gradient( -23deg, rgb(49,95,53) 0%, rgb(49,95,53) 53%, rgb(215,78,34) 60%, rgb(215,78,34) 100%);
+    padding: 28rem 0 0;
+    box-shadow: inset 0 -1*$borderSize 0 $whiteColor;
+    @media (max-width: $lg) {
+      background: $accentColor;
+      padding: 0;
+      color: $whiteColor;
+      box-shadow: none;
+      position: relative;
+      z-index: 998;
+      .header__inner {
+        width: 100%;
+        min-height: 0;
+        padding: 100rem 10rem var(--gap);
+        display: block;
+        border: none;
+      }
+      .header__title {
+        width: 100%;
+        padding: 0;
+        justify-content: flex-start;
+      }
+    }
+  }
+  &__header-gradient {
+    background-image: -webkit-linear-gradient( -23deg, rgb(49,95,53) 0%, rgb(49,95,53) 53%, rgb(215,78,34) 60%, rgb(215,78,34) 100%);
+    padding: 28rem 0 0;
+    box-shadow: inset 0 -1*$borderSize 0 $whiteColor;
+    @media (max-width: $lg) {
+      background: none;
+      padding-top: 0;
+      box-shadow: none;
+    }
+  }
+  &__main {
+  }
+}

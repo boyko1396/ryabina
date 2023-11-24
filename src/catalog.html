@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('html/head.html', {
+    'title': 'Рябина - Комплекс апартаментов и торговые помещения'
+  })
+  <body>
+
+    <div id="root" class="site">
+      <div class="site__inner">
+        <main role="main" class="site__main page-layout">
+          <!-- header BEGIN -->
+          @@include('html/components/header.html', {
+            'el': 'page-layout__header-gradient'
+          })
+          <!-- header END -->
+          <div class="page-layout__main">
+            <!-- model-section BEGIN -->
+            <section class="model-section">
+              <div class="container model-section__container">
+                <h1 class="visually-hidden">Планировка зданий</h1>
+                <div class="tab-nav model-section__tab-nav">
+                  <ul class="tab-nav__list">
+                    <li class="tab-nav__item">
+                      <a href="#" class="tab-nav__link">Парковка</a>
+                    </li>
+                    <li class="tab-nav__item">
+                      <a href="#" class="tab-nav__link is-active">1-й этаж</a>
+                    </li>
+                    <li class="tab-nav__item">
+                      <a href="#" class="tab-nav__link">2-й этаж</a>
+                    </li>
+                    <li class="tab-nav__item">
+                      <a href="#" class="tab-nav__link">3-й этаж</a>
+                    </li>
+                    <li class="tab-nav__item">
+                      <a href="#" class="tab-nav__link">4-й этаж</a>
+                    </li>
+                    <li class="tab-nav__item">
+                      <a href="#" class="tab-nav__link">5-й этаж</a>
+                    </li>
+                    <li class="tab-nav__item">
+                      <a href="#" class="tab-nav__link">6-й этаж</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="model-section__block">
+                  <div class="model-section__graph">
+                    <picture class="model-section__graph-picture">
+                      <img src="images/model-img-1.png" alt="Планировка - 1-й этаж">
+                    </picture>
+                    <div class="model-section__graph-content">
+                      <div class="color-accent model-section__graph-content-gate">Блок A</div>
+                      <h2 class="model-section__graph-content-title">План 2-го этажа<br><strong>АПАРТАМЕНТЫ (201-228)</strong></h2>
+                      <div class="color-orange model-section__graph-content-gate">Блок B</div>
+                    </div>
+                  </div>
+                  <table class="u-table model-section__table">
+                    <thead class="u-table__inner">
+                      <tr class="u-table__row">
+                        <th class="u-table__col u-table__col--1 u-table__col--type-title">№</th>
+                        <th class="u-table__col u-table__col--2 u-table__col--type-title">Тип</th>
+                        <th class="u-table__col u-table__col--3 u-table__col--type-title">Цена, р</th>
+                        <th class="u-table__col u-table__col--4 u-table__col--type-title">Статус</th>
+                        <th class="u-table__col u-table__col--5 u-table__col--type-title">Этаж</th>
+                        <th class="u-table__col u-table__col--6 u-table__col--type-title">S <span class="d-lg-none">общая</span><span class="d-lg-block">общ.</span>, м²</th>
+                        <th class="d-lg-block u-table__col u-table__col--9 u-table__col--type-title">Статус</th>
+                        <th class="u-table__col u-table__col--7 u-table__col--type-title">S жилая, м²</th>
+                        <th class="u-table__col u-table__col--8 u-table__col--type-title">Кухня, м²</th>
+                      </tr>
+                    </thead>
+                    <tbody class="u-table__inner">
+                      <tr class="u-table__row">
+                        <td class="u-table__col u-table__col--1">1</td>
+                        <td class="u-table__col u-table__col--2">Студия</td>
+                        <td class="u-table__col u-table__col--3">1 856 890</td>
+                        <td class="u-table__col u-table__col--4">
+                          <a href="book-floor.html">Забронировать</a>
+                        </td>
+                        <td class="u-table__col u-table__col--5">2</td>
+                        <td class="u-table__col u-table__col--6">18,9</td>
+                        <td class="d-lg-block u-table__col u-table__col--9">
+                          <a href="book-floor.html">Купить</a>
+                        </td>
+                        <td class="u-table__col u-table__col--7">15,0</td>
+                        <td class="u-table__col u-table__col--8">8,0</td>
+                      </tr>
+                      <tr class="u-table__row">
+                        <td class="u-table__col u-table__col--1">2</td>
+                        <td class="u-table__col u-table__col--2">2-комн.</td>
+                        <td class="u-table__col u-table__col--3">3 876 443</td>
+                        <td class="u-table__col u-table__col--4">
+                          <a href="book-floor.html">Забронировать</a>
+                        </td>
+                        <td class="u-table__col u-table__col--5">3</td>
+                        <td class="u-table__col u-table__col--6">58,8</td>
+                        <td class="d-lg-block u-table__col u-table__col--9">
+                          <a href="book-floor.html">Купить</a>
+                        </td>
+                        <td class="u-table__col u-table__col--7">40,0</td>
+                        <td class="u-table__col u-table__col--8">8,0</td>
+                      </tr>
+                      <tr class="u-table__row">
+                        <td class="u-table__col u-table__col--1">3</td>
+                        <td class="u-table__col u-table__col--2">2-комн.</td>
+                        <td class="u-table__col u-table__col--3">3 876 443</td>
+                        <td class="u-table__col u-table__col--4">
+                          <a href="book-floor.html">Забронировать</a>
+                        </td>
+                        <td class="u-table__col u-table__col--5">3</td>
+                        <td class="u-table__col u-table__col--6">58,8</td>
+                        <td class="d-lg-block u-table__col u-table__col--9">
+                          <a href="book-floor.html">Купить</a>
+                        </td>
+                        <td class="u-table__col u-table__col--7">40,0</td>
+                        <td class="u-table__col u-table__col--8">8,0</td>
+                      </tr>
+                      <tr class="u-table__row">
+                        <td class="u-table__col u-table__col--1">3</td>
+                        <td class="u-table__col u-table__col--2">Студия</td>
+                        <td class="u-table__col u-table__col--3">3 876 443</td>
+                        <td class="u-table__col u-table__col--4">
+                          <a href="book-floor.html">Забронировать</a>
+                        </td>
+                        <td class="u-table__col u-table__col--5">3</td>
+                        <td class="u-table__col u-table__col--6">58,8</td>
+                        <td class="d-lg-block u-table__col u-table__col--9">
+                          <a href="book-floor.html">Купить</a>
+                        </td>
+                        <td class="u-table__col u-table__col--7">40,0</td>
+                        <td class="u-table__col u-table__col--8">8,0</td>
+                      </tr>
+                      <tr class="u-table__row">
+                        <td class="u-table__col u-table__col--1">1</td>
+                        <td class="u-table__col u-table__col--2">Студия</td>
+                        <td class="u-table__col u-table__col--3">1 856 890</td>
+                        <td class="u-table__col u-table__col--4">
+                          <a href="book-floor.html">Забронировать</a>
+                        </td>
+                        <td class="u-table__col u-table__col--5">2</td>
+                        <td class="u-table__col u-table__col--6">18,9</td>
+                        <td class="d-lg-block u-table__col u-table__col--9">
+                          <a href="book-floor.html">Купить</a>
+                        </td>
+                        <td class="u-table__col u-table__col--7">15,0</td>
+                        <td class="u-table__col u-table__col--8">8,0</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </section>
+            <!-- model-section END -->
+          </div>
+        </main>
+      </div>
+    </div>
+
+    @@include('html/script.html')
+  </body>
+</html>

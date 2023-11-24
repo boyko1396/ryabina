@@ -1,0 +1,447 @@
+/* Headings, Common BEM Blocks, and More... */
+
+.btn {
+  width: 100%;
+  max-width: 100%;
+  min-height: var(--btn-height);
+  padding: var(--btn-padding-y) var(--btn-padding-x);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-style: normal;
+  font-weight: bold;
+  font-size: inherit;
+  font-size: var(--btn-font-size);
+  line-height: $lineHeightDefault;
+  font-family: $accentFont;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  border: none;
+  border-radius: 0;
+  outline: none;
+  user-select: none;
+  transition: $transition;
+  position: relative;
+  cursor: pointer;
+  z-index: 0;
+  &:hover {
+    text-decoration: none;
+  }
+  &.disabled,
+  &:disabled {
+    opacity: .6;
+    pointer-events: none;
+  }
+  &--theme {
+    &-orange-outline {
+      background: transparent;
+      color: $orangeColor;
+      &:hover {
+        background: $orangeColor;
+        color: $whiteColor;
+      }
+      &:focus,
+      &:active {
+      }
+    }
+  }
+  &--size {
+    &-md {
+      --btn-height: 186rem;
+      --btn-padding-x: 20rem;
+      --btn-padding-y: 12rem;
+      --btn-font-size: var(--fs-8);
+      @media (max-width: $lg) {
+        --btn-height: 120rem;
+        --btn-font-size: 24rem;
+      }
+      @media (max-width: $sm) {
+        --btn-height: 86rem;
+        --btn-font-size: 20rem;
+      }
+    }
+  }
+  &--width {
+    &-100 {
+      width: 100%;
+    }
+  }
+  &__inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    &:before,
+    &:after {
+      width: 100%;
+      height: 30%;
+      content: '';
+      position: absolute;
+      left: 0;
+      border: 0 solid $whiteColor;
+      z-index: -1;
+    }
+    &:before {
+      border-width: $borderSize $borderSize 0;
+      top: 0;
+      @media (max-width: $lg) {
+        border-width: $borderSizeMb $borderSizeMb 0;
+      }
+    }
+    &:after {
+      border-width: 0 $borderSize $borderSize;
+      bottom: 0;
+      @media (max-width: $lg) {
+        border-width: 0 $borderSizeMb $borderSizeMb;
+      }
+    }
+  }
+  &__title {
+  }
+}
+
+.u-input {
+  background: transparent;
+  width: 100%;
+  padding: 17rem 50rem;
+  display: block;
+  font-weight: normal;
+  font-size: var(--fs-default);
+  color: $blackColor;
+  border: 1rem solid $mediumGrayColor2;
+  box-shadow: 0 0 0 $mediumGrayColor2;
+  outline: none;
+  transition: $transition;
+  @media (max-width: $sm) {
+    padding: 14rem 20rem;
+  }
+  &:hover {
+    border-color: $blackColor;
+    box-shadow: 0 0 0 1rem rgba($blackColor, .4);
+  }
+  &:focus {
+    border-color: $blackColor;
+    box-shadow: 0 0 0 1rem rgba($blackColor, 1);
+  }
+  &:placehoder {
+    color: $mediumGrayColor2;
+    color: red;
+  }
+}
+
+.content {
+  line-height: 1.25;
+  > :first-child {
+    margin-top: 0;
+  }
+  > :last-child {
+    margin-bottom: 0;
+  }
+  p {
+    margin: 0 0 1em;
+  }
+  a {
+  }
+}
+
+.header-nav {
+  &__list {
+    height: 100%;
+    margin: 0;
+    padding: 0 4%;
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    @media (max-width: $lg) {
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      font-size: 18rem;
+    }
+  }
+  &__item {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    flex-grow: 1;
+    @media (max-width: $lg) {
+      width: 100%;
+      height: auto;
+      flex-grow: 0;
+    }
+  }
+  &__link {
+    @extend %area-click;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: $transition;
+    @media (max-width: $lg) {
+      height: auto;
+      padding: 10rem var(--gap);
+      justify-content: flex-start;
+      text-transform: uppercase;
+    }
+    &:hover {
+      text-decoration: none;
+      @media (min-width: $lg-mf) {
+        opacity: .6;
+      }
+    }
+    &--parking {
+      background: $mediumGrayColor;
+      color: $grayColor;
+    }
+    &--apartament {
+      background: $whiteColor;
+      color: $grayColor;
+    }
+  }
+  &__subnav {
+    background: $orangeColor;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    color: $whiteColor;
+    @media (max-width: $lg) {
+      padding: 10rem 0;
+    }
+    li {
+      @media (max-width: $lg) {
+        margin: 0;
+        padding: 0;
+        display: flex;
+      }
+    }
+    a {
+      display: block;
+      border: 0 solid $whiteColor;
+      transition: $transition;
+      &:hover {
+        text-decoration: none;
+        @media (min-width: $lg-mf) {
+          opacity: .6;
+        }
+      }
+      &.is-active {
+        border-width: 2rem 2rem 2rem 0;
+      }
+      @media (max-width: $lg) {
+        padding: 3rem var(--gap);
+      }
+    }
+  }
+}
+
+.btn-close {
+  @extend %btn-reset, %area-click;
+  background: $whiteColor;
+  padding: 18rem;
+  display: inline-flex;
+  color: $mediumGrayColor2;
+  cursor: pointer;
+  transition: $transition;
+  &:hover {
+    text-decoration: none;
+    &:hover {
+      @media (min-width: $lg-mf) {
+        color: $blackColor;
+      }
+    }
+  }
+  &__icon {
+    width: 30rem;
+    height: 30rem;
+    display: block;
+    transition: $transition;
+  }
+  &:hover &__icon {
+    @media (min-width: $lg-mf) {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.color-accent {
+  color: $accentColor;
+}
+
+.color-orange {
+  color: $orangeColor;
+}
+
+.u-table {
+  $tableGap: 12rem;
+  $tableGapMb: 10rem;
+  width: 100%;
+  color: $grayColor;
+  text-align: center;
+  border: none;
+  border-collapse: collapse;
+  td,
+  th {
+    border: none;
+  }
+  &__inner {
+  }
+  &__row {
+    transition: $transition;
+    &:hover {
+      @media (min-width: $lg-mf) {
+        background: $lightRedColor;
+        color: $blackColor;
+      }
+    }
+    &:nth-child(even):not(:hover) {
+      background: $mediumGrayColor;
+    }
+  }
+  &__col {
+    padding: $tableGap;
+    font-weight: normal;
+    @media (max-width: $sm) {
+      padding: $tableGapMb;
+    }
+    &--1 {
+    }
+    &--2 {
+      @media (max-width: $lg) {
+        display: none !important;
+      }
+    }
+    &--3 {
+      @media (max-width: $lg) {
+        display: none !important;
+      }
+    }
+    &--4 {
+      @media (max-width: $lg) {
+        display: none !important;
+      }
+    }
+    &--5 {
+    }
+    &--6 {
+    }
+    &--7 {
+      @media (max-width: $lg) {
+        display: none !important;
+      }
+    }
+    &--8 {
+      @media (max-width: $lg) {
+        display: none !important;
+      }
+    }
+    &--9 {
+    }
+    &--type-title {
+      background: $accentColor;
+      color: $whiteColor;
+    }
+  }
+  a {
+    margin: -1 * $tableGap;
+    padding: $tableGap;
+    display: block;
+    text-align: center;
+    transition: $transition;
+    @media (max-width: $sm) {
+      margin: -1 * $tableGapMb;
+      padding: $tableGapMb;
+    }
+    &:hover {
+      background: $orangeColor;
+      color: $whiteColor;
+      text-decoration: none;
+    }
+  }
+}
+
+.tab-nav {
+  &__list {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style-type: none;
+    @media (max-width: $lg) {
+      padding-bottom: 10rem;
+      flex-wrap: wrap;
+    }
+  }
+  &__item {
+    margin: 0;
+    padding: 0;
+    flex-grow: 1;
+    @media (max-width: $lg) {
+      flex-grow: 0;
+    }
+  }
+  &__link {
+    padding: 15rem 5rem;
+    display: block;
+    text-align: center;
+    color: $grayColor;
+    border: 10rem solid transparent;
+    transition: $transition;
+    &:hover {
+      border-color: rgba($grayColor, .4);
+    }
+    @media (max-width: $lg) {
+      padding: 10rem 22rem;
+      border-width: 2rem;
+      color: $whiteColor;
+    }
+    @media (max-width: $sm) {
+      padding: 7rem 11rem;
+      font-size: 12rem;
+    }
+    &.is-active {
+      border-color: $grayColor;
+      @media (max-width: $lg) {
+        border-color: currentColor;
+      }
+    }
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+.list-text {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  li {
+    margin: 0;
+    padding: 12rem 0;
+    border: 0 solid currentColor;
+    &:not(:first-child) {
+      border-top-width: 2rem;
+    }
+  }
+}
+
+.link-router {
+  @extend %area-click;
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  transition: $transition;
+  &:hover {
+    color: $blackColor;
+    text-decoration: none;
+  }
+  &__icon {
+    width: 1.8em;
+    height: 1.8em;
+    margin-right: .5em;
+    flex-shrink: 0;
+  }
+  &__title {
+  }
+}

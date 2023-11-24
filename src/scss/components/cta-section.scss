@@ -1,0 +1,71 @@
+.cta-section {
+  &__container {
+  }
+  &__form {
+    padding: ($gapBox * .5) $gapBox;
+    border: $borderSize solid $whiteColor;
+    @media (max-width: $lg) {
+      background: $lightGrayColor;
+      margin: 0 var(--gap-);
+      padding: 20rem $gapBoxMb 0;
+      border: none;
+    }
+    &-row {
+      justify-content: space-between;
+      align-items: center;
+    }
+    &-col {
+      &--area {
+        max-width: 50%;
+        flex: 0 0 50%;
+        @media (max-width: $md) {
+          max-width: 100%;
+          flex-basis: 100%;
+          padding-bottom: 20rem;
+        }
+      }
+      &--btn {
+        max-width: 50%;
+        padding-left: 84rem;
+        flex: 0 0 50%;
+        @media (max-width: $md) {
+          max-width: 100%;
+          padding-left: var(--offset);
+          flex-basis: 100%;
+        }
+      }
+    }
+    &-input {
+      &:not(:last-child) {
+        margin-bottom: 20rem;
+        @media (max-width: $sm) {
+          margin-bottom: 12rem;
+        }
+      }
+    }
+    &-btn-wrapper {
+      @media (max-width: $md) {
+        background: $mediumGrayColor;
+        margin: 0 -1 * $gapBoxMb;
+        padding: 20rem $gapBoxMb;
+      }
+    }
+    &-btn {
+      @media (max-width: $md) {
+        width: 90%;
+        margin: 0 auto;
+      }
+    }
+  }
+  &__footer {
+    padding: $gapBox 0;
+    display: flex;
+    justify-content: center;
+    @media (max-width: $lg) {
+      padding: $gapBoxMb 0;
+    }
+    &-link-router {
+      color: $mediumGrayColor2;
+    }
+  }
+}

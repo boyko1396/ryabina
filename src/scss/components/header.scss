@@ -1,0 +1,194 @@
+.header {
+  font-family: $accentFont;
+  color: $whiteColor;
+  @media (max-width: $lg) {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+  }
+  &__container {
+    @media (max-width: $lg) {
+      display: flex;
+      justify-content: center;
+    }
+  }
+  &__inner {
+    min-height: $headerHeight;
+    display: flex;
+    justify-content: center;
+    border: $borderSize solid $whiteColor;
+    position: relative;
+    @media (max-width: $lg) {
+      min-height: $headerHeightMb;
+      border-width: $borderSizeMb;
+    }
+  }
+  &__dropdown {
+    flex-grow: 1;
+    display: flex;
+    @media (max-width: $lg) {
+      background: $accentColor;
+      padding: 94rem 0 var(--gap);
+      display: block;
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      border: $borderSizeMb solid $whiteColor;
+      overflow-x: hidden;
+      overflow-y: auto;
+      z-index: -1;
+      .header__nav {
+        transition: all .4s;
+        transition-property: transform, opacity, visibility;
+      }
+    }
+    &:not(.is-show) {
+      @media (max-width: $lg) {
+        opacity: 0;
+        visibility: hidden;
+        user-select: none;
+        pointer-events: none;
+      }
+      .header__nav {
+        @media (max-width: $lg) {
+          transform: translateX(-100vw);
+          opacity: 0;
+          visibility: hidden;
+        }
+      }
+    }
+  }
+  &__link-router {
+    margin: -5rem 0 5rem;
+    font-size: 16rem;
+    opacity: .6;
+    @media (max-width: $lg) {
+      font-size: 12rem;
+    }
+  }
+  &__title {
+    margin: 0;
+    padding: 0 $gapBox;
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-weight: normal;
+    letter-spacing: .04em;
+    @media (max-width: $lg) {
+      padding: 0 $gapBoxMb;
+    }
+  }
+  &__brand {
+    max-width: 374rem;
+    padding: 9rem 10rem 15rem;
+    flex: 0 0 374rem;
+    font-size: 0;
+    text-align: center;
+    border: 0 solid $whiteColor;
+    border-left-width: $borderSize;
+    @media (max-width: $lg) {
+      background: $orangeColor;
+      max-width: 100%;
+      padding: 8rem 18rem;
+      flex: initial;
+      flex-grow: 1;
+      flex-basis: 0;
+      text-align: left;
+      border-left-width: 0;
+      border-right-width: $borderSizeMb;
+    }
+  }
+  &__suptitle {
+    height: 100%;
+    padding-top: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+  }
+  &__logo {
+    width: 100%;
+    max-width: 208rem;
+    display: inline-block;
+    font-size: 0;
+    transition: $transition;
+    @media (max-width: $lg) {
+      max-width: 132rem;
+    }
+    &:hover {
+      opacity: .7;
+    }
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+  &__nav {
+    flex-grow: 1;
+  }
+  &__btn-router {
+    margin: -1 * $borderSize 0 0 $borderSize;
+    position: absolute;
+    top: 0;
+    left: 100%;
+  }
+  &__toggle {
+    @extend %btn-reset;
+    @media (max-width: $lg) {
+      background: $accentColor;
+      width: 66rem;
+      position: relative;
+      transition: $transition;
+    }
+    span {
+      @media (max-width: $lg) {
+        background: $whiteColor;
+        width: 34rem;
+        height: 3rem;
+        margin: -2rem 0 0 -17rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transition: $transition;
+        &:nth-child(1) {
+          transform: translateY(-10rem);
+        }
+        &:nth-child(2) {
+        }
+        &:nth-child(3) {
+          transform: translateY(10rem);
+        }
+      }
+    }
+    &.is-active {
+      @media (max-width: $lg) {
+      }
+      span {
+        @media (max-width: $lg) {
+          &:nth-child(1) {
+            margin-top: -2rem;
+            transform: translateY(50%) rotate(-45deg);
+          }
+          &:nth-child(2) {
+            opacity: 0;
+            visibility: hidden;
+          }
+          &:nth-child(3) {
+            margin-top: -2rem;
+            transform: translateY(50%) rotate(45deg);
+          }
+        }
+      }
+    }
+    &:not(.is-active) {
+    }
+  }
+}
